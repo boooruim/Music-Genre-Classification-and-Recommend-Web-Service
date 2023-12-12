@@ -1,0 +1,426 @@
+/*-- Reset-Code --*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+nav ul,
+nav li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* start editing from here */
+a {
+    text-decoration: none;
+}
+
+.txt-rt {
+    text-align: right;
+}
+
+/* text align right */
+.txt-lt {
+    text-align: left;
+}
+
+/* text align left */
+.txt-center {
+    text-align: center;
+}
+
+/* text align center */
+.float-rt {
+    float: right;
+}
+
+/* float right */
+.float-lt {
+    float: left;
+}
+
+/* float left */
+.clear {
+    clear: both;
+}
+
+/* clear float */
+.pos-relative {
+    position: relative;
+}
+
+/* Position Relative */
+.pos-absolute {
+    position: absolute;
+}
+
+/* Position Absolute */
+.vertical-base {
+    vertical-align: baseline;
+}
+
+/* vertical align baseline */
+.vertical-top {
+    vertical-align: top;
+}
+
+/* vertical align top */
+nav.vertical ul li {
+    display: block;
+}
+
+/* vertical menu */
+nav.horizontal ul li {
+    display: inline-block;
+}
+
+/* horizontal menu */
+img {
+    max-width: 100%;
+}
+
+/*-- //Reset-Code --*/
+body {
+    /* background: #00BCD4; */
+    background-image: url('background2.jpg');
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    align-items: center;
+    justify-content: center;
+    /* background-position: center; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h1 {
+    color: #000;
+    /* background: #D1D1D1; */
+    max-width: 50%; /* 최대 너비를 60%로 설정합니다 */
+    margin: auto;
+    text-align: center;
+    font-size: 45px;
+    
+    margin-top: 50px;
+}
+
+h1{
+    font-size: 50px;
+    color: #f0f0f0;
+    text-align: center;
+    text-shadow: 
+      1px 1px 0 #bbb, 
+      2px 2px 0 #999, 
+      3px 3px 0 #777;
+    /* transform: perspective(500px) rotateX(10deg) rotateY(10deg); */
+}
+
+.agile-its {
+    width: 50%;
+    margin: 50px auto;
+    background: #fff;
+    /* background-color: transparent; 배경색을 투명하게 설정 */
+    opacity: 0.95;
+
+}
+
+h2 {
+    color: #000;
+    background: #f3c500;
+    /* padding: 10px 0; */
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+h3{
+    font-weight: bold;
+}
+
+.w3layouts {
+    padding: 50px;
+    background:#D1D1D1;
+    /*overflow: hidden;*/
+}
+
+
+
+.photos-upload-view {
+
+    /*position: relative;
+overflow: hidden;
+display: inline-block;
+text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* bottom: 20px;
+left: 130px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#upload {
+    /*display: flex;
+    flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="submit"] {
+    /*display: block;*/
+    width: 100%;
+    background: #00BCD4;
+    border: none;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+
+    /* margin-left:23%; */
+}
+
+
+.dynamic {
+    display: flex;
+}
+
+.genre_predict {
+    width: 50%;
+    border: 1px solid black;
+    /* 경계선을 보기 좋게 하기 위해 추가 */
+    box-sizing: border-box;
+    /* 테두리 포함한 50% 너비로 설정 */
+    display: flex; /* flexbox 레이아웃을 사용합니다 */
+    flex-direction: column; /* 자식 요소들을 세로로 정렬합니다 */
+    align-items: center;
+}
+
+.music_recommend {
+    width: 50%;
+    border: 1px solid black;
+    /* 경계선을 보기 좋게 하기 위해 추가 */
+    box-sizing: border-box;
+    /* 테두리 포함한 50% 너비로 설정 */
+    
+}
+
+.output_music{
+    
+    flex-direction: column; /* 자식 요소들을 세로로 정렬합니다 */
+    align-items: center;
+    padding: 5px;
+}
+
+/* 툴팁 이미지 스타일링 */
+.tooltip-image {
+    visibility: hidden;
+    width: auto; /* 이미지 크기에 맞게 조절 */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* 마우스 오버 시 툴팁 이미지 보이기 */
+  li:hover .tooltip-image {
+    visibility: visible;
+  }
+
+
+.result_lable {
+    color: black;
+    font-weight: bold;
+}
+
+
+.color-0 {
+    color: red;
+    font-weight: bold;
+}
+
+.color-1 {
+    color: orange;
+    font-weight: bold;
+
+}
+
+.color-2 {
+    color: hotpink;
+    font-weight: bold;
+}
+
+.color-3 {
+    color: green;
+    font-weight: bold;
+}
+
+.color-4 {
+    color: blue;
+    font-weight: bold;
+}
+
+.color-5 {
+    color: purple;
+    font-weight: bold;
+}
+
+.color-6 {
+    color: red;
+    font-weight: bold;
+}
+
+.color-7 {
+    color: orange;
+    font-weight: bold;
+}
+
+.color-8 {
+    color: hotpink;
+    font-weight: bold;
+}
+
+.color-9 {
+    color: green;
+    font-weight: bold;
+}
+
+.color-10 {
+    color: blue;
+    font-weight: bold;
+}
+
+.color-11 {
+    color: purple;
+    font-weight: bold;
+}
+.color-12 {
+    color: red;
+    font-weight: bold;
+}

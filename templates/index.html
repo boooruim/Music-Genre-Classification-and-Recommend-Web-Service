@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>Flask API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Music Genre<br>
+        Classification & Recommendation
+    </h1>
+    <div class="agile-its">
+        <h2>음악 파일을 업로드 해주세요! (.mp3 or .wav)</h2>
+        <div class="w3layouts">
+
+            <div class="photos-upload-view">
+
+                <form id="upload" action="/predict" method="POST" enctype="multipart/form-data">
+                    <!-- <div class="upload-btn-wrapper"> -->
+                    <!-- <button class="btn">오디오 업로드</button> -->
+                    <input type="file" value="Upload" name="wav">
+                    <!-- </div> -->
+                    <input type="submit" value="장르 분류 및 추천">
+
+                </form>
+                <div class="dynamic">
+                    {% if predict_rate %}
+                    <div class="genre_predict">
+                        <audio controls>
+                            <source src="{{ url_for('static', filename= input_audio_src) }}" type="audio/mpeg">
+                            <!-- 브라우저가 지원하지 않을 경우 대체 텍스트 표시 -->
+                            Your browser does not support the audio element.
+                        </audio>
+                        {% if label%}
+                            <span class="result_lable">
+                                {{ label }}
+                            </span>
+                        {% endif %}
+                        <ul>
+                            {% for item in predict_rate %}
+                            <li class="color-{{ loop.index0 }}">
+                                {{ item }}
+                                <img src="{{ url_for('static', filename='genres_description/genre' ~ loop.index0 ~ '.PNG') }}" class="tooltip-image">
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <!-- <span class="result_lable">
+                            {{ label }}
+                        </span> -->
+                    </div>
+
+                    <div class="music_recommend">
+                        <h2> 추천 음악  TOP 3</h2>
+
+                        {% for name, src in lists %}
+                        <div class = "output_music">
+                            
+                            <audio controls>
+                                <source src="{{ url_for('static', filename= src) }}" type="audio/mpeg">
+                                <!-- 브라우저가 지원하지 않을 경우 대체 텍스트 표시 -->
+                                Your browser does not support the audio element.
+                            </audio>
+
+                            <h3>{{ loop.index0 + 1 }} - {{ name }}</h3>
+                        </div>
+                        
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                </div>
+                
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
