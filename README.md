@@ -82,6 +82,7 @@ For music genre classification, a model implemented by https://github.com/boooru
 
 - Once the image(deepo) is downloaded, run a Docker container and enter it.
 - ```$ cd Music-Genre-Classification-and-Recommend-Web-Service```
+- ```$ python preprocess.py ``` # Prior to running this command, please execute the preprocessing script to prepare the data.
 - ```$ python main.py```
 
 ## Architecture
