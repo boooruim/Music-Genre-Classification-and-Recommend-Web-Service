@@ -19,7 +19,7 @@ def recommend(file, predict_genre, audio):
     y, sr = audio
 
     input_chroma = librosa.feature.chroma_stft(y=y, sr=sr)
-    #print(input_chroma.shape)  
+    #print(input_chroma.shape)
 
     # 폴더에 있는 100개의 Chroma 파일 로드
     chroma_folder_path = f"Data/{predict_genre}"

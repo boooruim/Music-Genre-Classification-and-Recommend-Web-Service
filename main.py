@@ -10,9 +10,10 @@ import torch
 from ml import model
 import shutil
 import classify 
-from recommend3 import recommend
+from recommend import recommend
 import time
 app = Flask(__name__)
+
 
 # 메인 페이지 라우팅
 @app.route("/")
